@@ -69,17 +69,6 @@ Current focus:
 
 # REBIS
 
-**State-aware orchestration runtime for long-horizon AI agent workflows.**
-
----
-
-![REBIS Runtime](assets/rebis_runtime.png)
-
-> **Runtime governance for long-horizon AI agent pipelines.**  
-> Prevents **reasoning drift**, preserves **task-state fidelity**, reduces **wasted computation**, and **builds better results**.
-
----
-
 # The Problem
 
 Modern AI systems increasingly rely on multi-step reasoning and agent collaboration.  
