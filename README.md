@@ -1,11 +1,9 @@
 <p align="center">
   <img src="assets/rebis-runtime-banner.png" width="100%">
 </p>
-> **Runtime governance for long-horizon AI agent pipelines**
->
-> • Prevents **reasoning drift**  
-> • Preserves **task-state fidelity**  
-> • Reduces **wasted computation**
+## Runtime Governance for AI Agent Pipelines
+
+Prevent **reasoning drift**, preserve **task-state fidelity**, and reduce **wasted computation**.
 
 ## The Drift Problem
 Long-horizon AI workflows degrade without structured transition governance.
