@@ -67,8 +67,6 @@ Current focus:
 
 # Samuel Bainbridge
 
-REBIS
-
 Rebis is an orchestration runtime for AI agent workflows designed to preserve task-state fidelity, prevent reasoning drift, and reduce wasted computation in long-horizon pipelines.
 
 Modern AI systems increasingly rely on multi-step reasoning and agent collaboration. However, as workflows grow longer and more complex, they often suffer from:
