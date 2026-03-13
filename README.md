@@ -6,9 +6,6 @@
 
 ![REBIS Runtime](assets/rebis_runtime.png)
 
-<p align="center">
-  <img src="assets/rebis-runtime-banner.png" width="100%">
-</p>
 > **Runtime governance for long-horizon AI agent pipelines.**  
 > Prevents **reasoning drift**, preserves **task-state fidelity**, reduces **wasted computation**, and **builds better results**.
 
