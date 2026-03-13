@@ -1,9 +1,16 @@
+# REBIS
+
+**State-aware orchestration runtime for long-horizon AI agent workflows.**
+
+---
+
+![REBIS Runtime](assets/rebis_runtime.png)
+
 <p align="center">
   <img src="assets/rebis-runtime-banner.png" width="100%">
 </p>
-## Runtime Governance for AI Agent Pipelines
-
-Prevent **reasoning drift**, preserve **task-state fidelity**, and reduce **wasted computation**.
+> **Runtime governance for long-horizon AI agent pipelines.**  
+> Prevents **reasoning drift**, preserves **task-state fidelity**, reduces **wasted computation**, and **builds better results**.
 
 ## The Drift Problem
 Long-horizon AI workflows degrade without structured transition governance.
