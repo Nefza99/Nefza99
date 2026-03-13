@@ -67,114 +67,126 @@ Current focus:
 
 # Samuel Bainbridge
 
-Rebis is an orchestration runtime for AI agent workflows designed to preserve task-state fidelity, prevent reasoning drift, and reduce wasted computation in long-horizon pipelines.
+# REBIS
 
-Modern AI systems increasingly rely on multi-step reasoning and agent collaboration. However, as workflows grow longer and more complex, they often suffer from:
+**State-aware orchestration runtime for long-horizon AI agent workflows.**
 
-reasoning drift
+---
 
-dropped constraints
+![REBIS Runtime](assets/rebis_runtime.png)
 
-corrupted agent handoffs
+> **Runtime governance for long-horizon AI agent pipelines.**  
+> Prevents **reasoning drift**, preserves **task-state fidelity**, reduces **wasted computation**, and **builds better results**.
 
-repeated self-correction loops that waste computation
+---
 
-Rebis introduces structured transition governance between workflow stages so that agents can maintain reliable state and focus computation on solving the task rather than repairing broken context.
+# The Problem
 
-Why Rebis Exists
+Modern AI systems increasingly rely on multi-step reasoning and agent collaboration.  
+As workflows grow longer and more complex, they often degrade due to:
 
-AI agents are powerful but fragile in long task chains.
+- **reasoning drift**
+- **dropped constraints**
+- **corrupted agent handoffs**
+- **repeated self-correction loops**
+- **wasted computation**
 
-Without structured governance between reasoning stages, systems tend to degrade through:
+Long-horizon agent pipelines are powerful — but fragile.
 
-accumulated context errors
+Without structured transition governance, context integrity slowly erodes and agents spend more time repairing errors than solving the task.
 
-constraint loss
+---
 
-unstable decision chains
+# What Rebis Does
 
-redundant computation cycles
+Rebis introduces **structured workflow governance between reasoning stages**.
 
-Rebis addresses this by acting as a workflow governance layer between agents and tools.
+Agents perform work.  
+**Rebis governs the transitions between them.**
 
-Agents perform work.
-Rebis governs the workflow.
+Instead of allowing uncontrolled step-to-step drift, Rebis validates transitions to ensure that:
 
-Architecture Overview
+- task objectives remain consistent
+- constraints are preserved
+- handoffs remain reliable
+- computation is used efficiently
+
+---
+
+# Architecture
 Agent
-   ↓
+↓
 Rebis Orchestrator
-   ↓
+↓
 Validation + State Tracking
-   ↓
+↓
 Tool / Next Agent
 
-Rebis validates transitions between reasoning stages to maintain:
+Rebis acts as a **runtime governance layer** between agents and tools.
 
-task-state fidelity
+Each transition is validated before execution to maintain:
 
-constraint integrity
+- **task-state fidelity**
+- **constraint integrity**
+- **stable reasoning chains**
+- **reliable agent handoffs**
+- **efficient compute usage**
 
-reliable agent handoffs
+---
 
-efficient computation
+# Core Concepts
 
-The result is more stable long-horizon workflows.
+### Task-State Fidelity
+Critical task objectives and constraints remain consistent across workflow stages.
 
-Core Concepts
-Task-State Fidelity
+### Reasoning Drift Prevention
+Rebis detects and corrects deviations from the original objective during multi-step reasoning.
 
-Rebis ensures that critical task constraints and objectives remain consistent across workflow stages.
+### Transition Governance
+All workflow transitions are validated before execution to ensure logical continuity.
 
-Reasoning Drift Prevention
+### Reduced Wasted Computation
+By preventing broken state propagation, Rebis reduces repeated self-correction cycles.
 
-The system detects and corrects deviations from the original objective during multi-step reasoning.
+### Handoff Validation
+Agent-to-agent and agent-to-tool transitions are verified before execution.
 
-Transition Governance
+---
 
-All workflow transitions are validated before execution to ensure the next step is logically consistent.
+# Example (Conceptual)
 
-Reduced Wasted Computation
-
-By preventing broken state propagation, Rebis reduces repeated agent self-correction cycles.
-
-Handoff Validation
-
-Agent-to-agent and agent-to-tool transitions are checked for integrity before execution.
-
-Example (Conceptual)
-const rebis = new RebisRuntime(config);
+```javascript
+const rebis = new RebisRuntime(config)
 
 await rebis.run({
   objective: "Complete a long-horizon AI workflow",
   agents: [planner, researcher, executor]
-});
-
-In this workflow:
+})
+Workflow behavior:
 
 Agents propose actions
 
-Rebis validates transitions
+Rebis validates the transition
 
-State integrity is preserved
+Task state remains consistent
 
 Computation is used efficiently
 
 Current Status
 
-Rebis is currently an experimental architecture exploring governance patterns for long-horizon AI workflows.
+Rebis is an experimental architecture exploring governance patterns for long-horizon AI workflows.
 
-The project focuses on:
+Current research focuses on:
 
 agent workflow orchestration
 
 transition validation systems
 
-drift mitigation strategies
+reasoning drift mitigation
 
 reliable multi-agent collaboration
 
-Future iterations aim to expand runtime capabilities and evaluation tooling.
+Future iterations will expand runtime capabilities, benchmarking tools, and evaluation frameworks.
 
 Key Ideas
 
@@ -197,3 +209,6 @@ Ideas, experiments, and improvements are welcome.
 License
 
 MIT License
+
+
+---
