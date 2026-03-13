@@ -1,4 +1,4 @@
-***REBIS
+**REBIS
  <p align="center">   <img src="assets/rebis-runtime-banner.png" alt="REBIS Runtime" width="100%"> </p>
 
 Runtime Governance for AI Agent Workflows
