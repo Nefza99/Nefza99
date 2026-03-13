@@ -1,4 +1,6 @@
-![Rebis Banner](assets/rebis-banner.jpg)
+<p align="center">
+  <img src="assets/rebis-banner.jpg" width="900"/>
+</p>
 
 # Samuel Bainbridge
 
