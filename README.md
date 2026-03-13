@@ -151,7 +151,7 @@ await rebis.run({
   objective: "Complete a long-horizon AI workflow",
   agents: [planner, researcher, executor]
 })
-
+```
 ## Workflow Behavior
 
 1. **Agents propose actions**
