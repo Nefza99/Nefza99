@@ -4,63 +4,135 @@
 
 # Samuel Bainbridge
 
-Creator of **Rebis** — an orchestration runtime for AI agent workflows focused on preventing reasoning drift and reducing wasted computation.
+REBIS
 
----
+Rebis is an orchestration runtime for AI agent workflows designed to preserve task-state fidelity, prevent reasoning drift, and reduce wasted computation in long-horizon pipelines.
 
-## Rebis
+Modern AI systems increasingly rely on multi-step reasoning and agent collaboration. However, as workflows grow longer and more complex, they often suffer from:
 
-Rebis is a governance and orchestration runtime designed for long-horizon AI agent workflows.
+reasoning drift
 
-Modern agent systems often fail during long task chains due to:
+dropped constraints
 
-• reasoning drift  
-• corrupted state handoffs  
-• lost constraints  
-• wasted compute from repeated self-correction  
+corrupted agent handoffs
 
-Rebis introduces **structured transition governance** between reasoning steps so agents can preserve task-state fidelity and focus compute on solving the task.
+repeated self-correction loops that waste computation
 
----
+Rebis introduces structured transition governance between workflow stages so that agents can maintain reliable state and focus computation on solving the task rather than repairing broken context.
 
-## Core Concepts
+Why Rebis Exists
 
-Agent → Rebis → Tool
+AI agents are powerful but fragile in long task chains.
+
+Without structured governance between reasoning stages, systems tend to degrade through:
+
+accumulated context errors
+
+constraint loss
+
+unstable decision chains
+
+redundant computation cycles
+
+Rebis addresses this by acting as a workflow governance layer between agents and tools.
+
+Agents perform work.
+Rebis governs the workflow.
+
+Architecture Overview
+Agent
+   ↓
+Rebis Orchestrator
+   ↓
+Validation + State Tracking
+   ↓
+Tool / Next Agent
 
 Rebis validates transitions between reasoning stages to maintain:
 
-- state fidelity
-- constraint integrity
-- reliable handoffs
-- efficient computation
+task-state fidelity
 
----
+constraint integrity
 
-## Current Work
+reliable agent handoffs
 
-Building experimental infrastructure for:
+efficient computation
 
-• multi-agent orchestration  
-• transition validation  
-• reasoning drift mitigation  
-• long-horizon task stability  
+The result is more stable long-horizon workflows.
 
----
+Core Concepts
+Task-State Fidelity
 
-## Projects
+Rebis ensures that critical task constraints and objectives remain consistent across workflow stages.
 
-🔹 **Rebis AI Auditing Architecture**  
-AI governance pipeline for agent workflows.
+Reasoning Drift Prevention
 
-🔹 **ARGUS System**  
-Signal monitoring and event correlation infrastructure.
+The system detects and corrects deviations from the original objective during multi-step reasoning.
 
----
+Transition Governance
 
-## Interests
+All workflow transitions are validated before execution to ensure the next step is logically consistent.
 
-AI Infrastructure  
-Agent Systems  
-Alignment Engineering  
-Distributed Systems  
-Autonomous Workflows
+Reduced Wasted Computation
+
+By preventing broken state propagation, Rebis reduces repeated agent self-correction cycles.
+
+Handoff Validation
+
+Agent-to-agent and agent-to-tool transitions are checked for integrity before execution.
+
+Example (Conceptual)
+const rebis = new RebisRuntime(config);
+
+await rebis.run({
+  objective: "Complete a long-horizon AI workflow",
+  agents: [planner, researcher, executor]
+});
+
+In this workflow:
+
+Agents propose actions
+
+Rebis validates transitions
+
+State integrity is preserved
+
+Computation is used efficiently
+
+Current Status
+
+Rebis is currently an experimental architecture exploring governance patterns for long-horizon AI workflows.
+
+The project focuses on:
+
+agent workflow orchestration
+
+transition validation systems
+
+drift mitigation strategies
+
+reliable multi-agent collaboration
+
+Future iterations aim to expand runtime capabilities and evaluation tooling.
+
+Key Ideas
+
+AI Agent Orchestration
+
+Multi-Agent Workflow Governance
+
+Reasoning Drift Mitigation
+
+Task-State Preservation
+
+Compute Efficiency
+
+Contributing
+
+Rebis is an evolving research project exploring new approaches to reliable AI workflows.
+
+Ideas, experiments, and improvements are welcome.
+
+License
+
+MIT License
