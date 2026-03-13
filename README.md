@@ -151,53 +151,53 @@ await rebis.run({
   objective: "Complete a long-horizon AI workflow",
   agents: [planner, researcher, executor]
 })
-Workflow behavior:
 
-Agents propose actions
+## Workflow Behavior
 
-Rebis validates the transition
+1. **Agents propose actions**
+2. **Rebis validates the transition**
+3. **Task-state integrity is preserved**
+4. **Computation is focused on solving the task**
 
-Task state remains consistent
+---
 
-Computation is used efficiently
+## Current Status
 
-Current Status
-
-Rebis is an experimental architecture exploring governance patterns for long-horizon AI workflows.
+**Rebis is an experimental runtime exploring governance patterns for long-horizon AI workflows.**
 
 Current research focuses on:
 
-agent workflow orchestration
+- **Agent workflow orchestration**
+- **Transition validation systems**
+- **Reasoning drift mitigation**
+- **Reliable multi-agent collaboration**
 
-transition validation systems
+Future iterations will expand:
 
-reasoning drift mitigation
+- runtime capabilities
+- benchmarking frameworks
+- evaluation tooling for agent reliability
 
-reliable multi-agent collaboration
+---
 
-Future iterations will expand runtime capabilities, benchmarking tools, and evaluation frameworks.
+## Key Ideas
 
-Key Ideas
+- **AI Agent Orchestration**
+- **Multi-Agent Workflow Governance**
+- **Reasoning Drift Mitigation**
+- **Task-State Preservation**
+- **Compute Efficiency**
 
-AI Agent Orchestration
+---
 
-Multi-Agent Workflow Governance
+## Contributing
 
-Reasoning Drift Mitigation
-
-Task-State Preservation
-
-Compute Efficiency
-
-Contributing
-
-Rebis is an evolving research project exploring new approaches to reliable AI workflows.
+**Rebis is an evolving research project exploring new approaches to reliable AI workflows.**
 
 Ideas, experiments, and improvements are welcome.
 
-License
-
-MIT License
-
-
 ---
+
+## License
+
+**MIT License**
