@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/REBIS PROFILE.png" width="900"/>
+  <img src="assets/rebis-runtime-banner.png" width="100%">
 </p>
 
 # Samuel Bainbridge
