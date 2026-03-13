@@ -4,16 +4,46 @@
 > Runtime governance for long-horizon AI agent workflows.
 > Prevents reasoning drift, preserves task-state fidelity, and reduces wasted computation.
 
-## Architecture
+## The Drift Problem
 
-Agent → Proposed Action → **Rebis Runtime** → Validated Transition → Tool / Next Agent
+Without structured workflow governance, long-horizon AI pipelines tend to degrade.
+
+### Without Rebis
+Agent → Agent → Agent → Agent
+↓
+constraint loss
+↓
+reasoning drift
+↓
+repeated correction loops
+↓
+wasted computation
+
+### With Rebis
+Agent → Rebis → Agent → Rebis → Agent
+
+Each transition is validated.
+
+• task-state preserved
+• constraints maintained
+• reasoning drift prevented
+• compute used efficiently 
+
+
+
+## Architecture
+```
+Agent → Proposed Action → Rebis Runtime → Validated Transition → Tool / Next Agent
+```
 
 Rebis ensures:
 
-- task-state preservation  
-- constraint integrity  
-- validated handoffs  
-- reduced wasted computation
+• **task-state preservation**  
+• **constraint integrity**  
+• **validated handoffs**  
+• **reduced wasted computation**
+
+Runtime governance for long-horizon AI agent workflows.
 
 ## Status
 
