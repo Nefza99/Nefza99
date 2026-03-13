@@ -4,6 +4,29 @@
 > Runtime governance for long-horizon AI agent workflows.
 > Prevents reasoning drift, preserves task-state fidelity, and reduces wasted computation.
 
+## Architecture
+
+Agent → Proposed Action → **Rebis Runtime** → Validated Transition → Tool / Next Agent
+
+Rebis ensures:
+
+- task-state preservation  
+- constraint integrity  
+- validated handoffs  
+- reduced wasted computation
+
+## Status
+
+Rebis is an experimental orchestration runtime exploring governance patterns
+for long-horizon AI workflows and multi-agent systems.
+
+Current focus:
+
+- transition validation
+- reasoning drift mitigation
+- task-state fidelity preservation
+- compute efficiency in agent pipelines
+
 # Samuel Bainbridge
 
 REBIS
